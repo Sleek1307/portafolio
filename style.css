@@ -1,0 +1,33 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.julian {
+  width: 325px;
+  height: 325px;
+}
+
+.img-julian{
+    border: 5px solid whitesmoke;
+    border-radius: 50%;
+}
+
+.nav-item{
+    border-bottom: 0px solid white;
+    transition: 0.2s;
+}
+
+.nav-item:hover{
+    border-bottom: 4px solid white ;
+    background-color: black;
+}
+
+.bg-black{
+    background-color: rgba(13, 13, 13, 0.96)!important;
+}
+
+@media (max-width: 685px) {
+  .nav-container{
+      display: none;
+  }
+} 
