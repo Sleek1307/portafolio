@@ -28,20 +28,20 @@ projects.map((project, index) => {
   projectsContainer.innerHTML += `
     <div class="col-sm-6 col-lg-4 col-12 d-flex justify-content-center my-3">
       <div class="card oswald" style="height: 400px; width: 350px;">
-        <div class="card-header ">
+        <div class="card-header " style="height: 55px;">
           <h3 class="text-capitalize text-center">
             ${project.name}
           </h3>
         </div>
-        <div class="card-body d-flex flex-column justify-content-between align-items-center bg-img" style ="background: url(img/${project.image})">
+        <div class="card-body d-flex justify-content-center align-items-end bg-img" style ="background: url(img/${project.image}); height: 345px">
           <div class="w-100 row">
             <div class="col-6 d-flex justify-content-center align-items-center">
-              <a href="#" class="btn btn-outline-dark" style="width: 100px !important;">
+              <a href="#" class="btn btn-secondary" style="width: 100px !important;">
                 Ver proyecto
               </a>
             </div>
             <div class="col-6 d-flex justify-content-center align-items-center">
-              <a href="${project.github_link}" class="btn btn-outline-dark" style="width: 110px !important;" target="_blank">
+              <a href="${project.github_link}" class="btn btn-secondary" style="width: 110px !important;" target="_blank">
                 Ver en github
               </a>
             </div>
