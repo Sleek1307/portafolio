@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importando el CSS de bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- Importando los iconos de bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="header py-0 navbar navbar-expand-lg bg-light shadow-sm position-fixed w-100">
+    <div class="container ">
+
+      <div class="d-flex align-items-center">
+        <a href="/main.html">
+          <img class="logo img-fluid" src="img/JM_LOGO.png" />
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+        aria-controls="navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarNav" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+            id="offcanvasNavbarLabel"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-grow-1 justify-content-end pe-3">
+            <li class="nav-item">
+              <a href="#header" class="text-center nav-link text-decoration-none text-uppercase text-black
+                fw-light fs-5 mx-0 oswald">
+                Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-me" class="text-center nav-link text-decoration-none text-uppercase text-black
+                fw-light fs-5 mx-0 oswald">
+                Acerca de mi
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="text-center nav-link text-decoration-none text-uppercase text-black
+                fw-light fs-5 mx-0 oswald">
+                Projects
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="text-center nav-link text-decoration-none text-uppercase text-black
+                fw-light fs-5 mx-0 oswald">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="w-100 d-flex flex-column align-items-center" style="padding-top: 75px;">
+
+    <div id="header"
+      class="w-90 rounded-1 bg-light d-flex flex-column align-items-center justify-content-center shadow-md my-3"
+      style="height: 600px">
+      <div class="julian">
+        <img class="img-julian shadow-md w-100 h-100" src="img/JULIAN.jpg" />
+      </div>
+      <h1 class="text-center h1 text-black mb-0 text-uppercase">Julian Mira</h1>
+      <p class="career text-center text-black mb-0 career fw-light">Web Developer</p>
+    </div>
+
+    <div id="about-me" class="my-3 rounded-1 about-me w-90 bg-light d-flex flex-column align-items-center shadow-md">
+      <div class="w-75">
+        <h2 class="mt-2 text-black text-center fw-light oswald">Acerca de mi</h2>
+        <p class="text-justify nanum">
+          Soy un joven estudiante de desarrollo de software con aspiración a mi primer empleo junior.
+          Me considero una persona con una alta resiliencia, persistente, con una curiosidad nata y
+          veo en la tecnología una herramienta para cambiar el mundo.
+        </p>
+      </div>
+
+      <div class="w-75">
+        <div class="row">
+          <div class="col-12 col-md-6 d-flex justify-content-center border-end">
+            <div class="d-flex flex-column align-content-center">
+              <h3 class="text-center fw-light oswald">Habilidades</h3>
+              <p class="text-justify nanum">
+                Mis principales habilidades se enfocan en el desarrollo web front-end,
+                maquetación web con HTML, diseño con CSS y programacion con JavaScript.
+                También manejo la libreria de React y la de Bootstrap.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 d-flex justify-content-center border-start">
+            <div class="d-flex flex-column align-items-center">
+              <h3 class="text-center fw-light oswald">Conocimientos</h3>
+              <p class="text-justify nanum">
+                Aunque mis principales conocimientos están en el front-end también tengo
+                conocimientos en el back-end, poseo conocimientos en MYSQL, Express y MongoDB.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class=" w-75 d-flex justify-content-center infinite-carousel">
+        <div class="carousel-items">
+          <div class="carousel-element">
+            <img src="img/HTML.png">
+          </div>
+          <div class="carousel-element">
+            <img src="img/CSS.png">
+          </div>
+          <div class="carousel-element">
+            <img src="img/JS.png">
+          </div>
+          <div class="carousel-element">
+            <img src="img/REACT.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class=" my-3 projects w-90 d-flex flex-column shadow-md align-items-center bg-light rounded-1">
+      <div class="w-75 h-100 text-black d-flex flex-column">
+        <div class="h-25">
+          <h2 class="mt-2 text-center oswald fw-light">Proyectos</h2>
+          <p class="nanum">En esta sección encontraras un poco del codigo que he realizado, proyectos personales y
+            academicos en los que he participado, encontraras una demo del proyecto y tambien el enlace
+            al codigo en github aquí podrás conocer cuales son mis capacidades, divertirte un poco y quien sabe
+            a lo mejor encuentres un poco de inspiracion para tus proyectos. Asi que, espero que disfrutes del Tour
+          </p>
+        </div>
+        <div class="d-flex justify-content-center h-75">
+          <div id="projectsCarousel" class="carousel slide h-100 w-75 d-flex align-items-center"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0"
+                class="active bg-dark"></button>
+            </div>
+            <div id="carousel-container" class="carousel-inner">
+              <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel"
+                data-bs-slide="prev">
+                <span aria-hidden="true">
+                  <i class="bi bi-chevron-double-left text-dark fs-1"></i>
+                </span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel"
+                data-bs-slide="next">
+                <span aria-hidden="true">
+                  <i class="bi bi-chevron-double-right text-dark fs-1"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center my-3">
+          <div class="w-75">
+            <a href="projects.html" class="btn btn-outline-dark" style="width: 100px!important;">
+              Ver todos
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="contact rounded-3 my-3 bg-light w-90 shadow-md row">
+      <div class="text-black col-12 col-md-6 rounded-3 found">
+        <div class="w-75 mx-auto my-auto p-1">
+          <form action="https://formspree.io/f/xlezyjov" method="POST" id="form_contact">
+            <div class="w-100 d-flex justify-content-center flex-column rounded-3">
+              <label class="form-label fw-bold">Nombre:</label>
+              <input type="text" name="nombres" class="rounded-2 border-1">
+              <label class="form-label fw-bold">Email:</label>
+              <input type="text" name="email" class="rounded-2 border-1">
+              <label class="form-label fw-bold">Asunto:</label>
+              <input type="text" name="asunto" class="rounded-2 border-1">
+              <label class="form-label fw-bold">Mensaje</label>
+              <textarea cols="30" rows="6" name="mensaje" class="rounded-2"></textarea>
+              <button type="submit" class="btn btn-outline-dark mt-2">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+        <p id="error" class="text-danger text-center fw-bold">
+        </p>
+      </div>
+      <div class="text-black col-12 col-md-6" style="height: 400px;">
+        <div class="social h-100 w-100 d-flex flex-column align-items-center justify-content-center">
+          <h2 class="oswald">Informacion de contacto</h2>
+          <a href="https://twitter.com/Julian81972281" class="fs-4 text-decoration-none text-dark">
+            <div class="d-flex">
+              <i class="text-center bi bi-twitter"></i>
+              <p class="text-center text-wrap oswald fw-lighter">@Julian81972281</p>
+            </div>
+          </a>
+
+          <a href="mailto:miramontoyajulian@gmail.com?" class="fs-4 text-decoration-none text-dark">
+            <div class="d-flex">
+              <i class="text-center bi bi-at"></i>
+              <p class="text-center text-wrap oswald fw-lighter">miramontoyajulian@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:3106867642" class="fs-4 text-decoration-none text-dark">
+            <div class="d-flex">
+              <i class="text-center bi bi-phone"></i>
+              <p class="text-center text-wrap oswald fw-lighter">3106867642</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/Sleek1307" class="fs-4 text-decoration-none text-dark" target="_blank">
+            <div class="d-flex">
+              <i class="text-center bi bi-github"></i>
+              <p class="text-center text-wrap oswald fw-lighter">Sleek1307</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
