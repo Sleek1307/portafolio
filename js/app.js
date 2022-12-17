@@ -1,92 +1,42 @@
-const carrusel = document.querySelector(".carousel-items");
-const anchors = document.querySelectorAll(".nav-item");
-const offcanvas = document.querySelector(".offcanvas");
-const formulario = document.querySelector("#form_contact");
+const formulario = document.querySelector("#form");
 const formError = document.querySelector('#error');
-const carouselContainer = document.querySelector("#carousel-container");
+const downloadButton = document.querySelector('#download-button');
 
-let interval = null;
-let maxScrolltWidth = carrusel.clientWidth - carrusel.scrollLeft;
-console.log(maxScrolltWidth);
-let step = 1
-const start = () => {
-  interval = setInterval(() => {
-    carrusel.scrollLeft = carrusel.scrollLeft + step;
-    if (carrusel.scrollLeft === maxScrolltWidth) {
-      step = step * -1
-    } else if (carrusel.scrollLeft === 0) {
-      step = step * -1;
-    }
-  }, 8);
+// ----------------------------------------------- Descarga de arvhivo -----------------------------------------------------
+const download = (path, goBlank, fileName) => {
+    const downloadInstance = document.createElement('a');
+    downloadInstance.href = path;
+    downloadInstance.target = goBlank ? '_blank' : '';
+
+    document.body.appendChild(downloadInstance);
+    downloadInstance.click();
+    document.body.removeChild(downloadInstance);
 };
-start();
 
-anchors.forEach((anchor) => {
-  anchor.addEventListener('click', (event) => {
+downloadButton.addEventListener('click', () => {
+    download('assets/files/Hoja-de-vida-Julian-2.pdf', true, 'Hoja-de-vida-julian')
+});
+// ------------------------------------------------ Formulario ----------------------------------------------------------------
+
+async function handleSubmit(event) {
     event.preventDefault();
-    let breakpoint = window.scrollY;
-    const tag = document.getElementById(event.target.href.split('#')[1]);
-    breakpoint += tag.getBoundingClientRect().y;
-    breakpoint += -87;
-    window.scroll(0, breakpoint);
-  })
-})
+    const form = new FormData(this);
 
-let projects = new Array();
-projects.push({
-  name: "formularios en react",
-  image: 'react-form.png',
-  github_link: 'https://github.com/Sleek1307/react-form',
-  project_link: '#',
-  tags: [
-    'html',
-    'css',
-    'javascript',
-    'react',
-  ]
-})
-projects.map((project) => {
-  carouselContainer.innerHTML = `<div class="carousel-item active">
-                      <div class="card">
-                        <div class="card-header">
-                          <h5 class="card-title text-capitalize">${project.name}</h5>
-                        </div>
-                        <div class="card-body row" style ="height: 340px;">
-                        <div class="col-12  h-100 col-sm-6 d-flex  align-items-center">
-                        <img src="img/${project.image}" class="img-fluid">
-                        </div>
-                        <div class="d-none d-lg-flex col-6">
-                        </div>
-                        </div>
-                      </div>
-                    </div>`;
-
-})
-
-formulario.addEventListener('submit', (event) => {
-  event.preventDefault();
-  let formData = new FormData(event.target);
-  fetch(event.target.action, {
-    method: formulario.method,
-    body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      formError.innerHTML = 'Todo ha ido correctamente';
-      formError.classList = 'text-success fw-bold';
-      formulario.reset();
-    } else {
-      response.json().then(data => {
-        if (Object.hasOwn(formData, 'errors')) {
-          formError.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-        } else {
-          formError.innerHTML = 'Oops! Algo ha ido mal en el proceso de envio';
+    const response =  await fetch('https://formspree.io/f/xlezyjov', {
+        method: this.method,
+        body: form,
+        headers: {
+            'Accept': 'application/json'
         }
-      })
+    });
+
+    if (response.ok) {
+        formulario.reset();
+        alert('Gracias por contactarte conmigo, te estaré respondiendo muy pronto :)')
+    }else{
+        formulario.reset();
+        alert("Oh no! algo ha ido mal a la hora de enviar el correo intentalo mas tarde :'(")
     }
-  }).catch(error => {
-    formError.innerHTML = "Oops! There was a problem submitting your form"
-  })
-})
+}
+
+formulario.addEventListener('submit', handleSubmit);
