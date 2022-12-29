@@ -2,55 +2,63 @@ const projectsContainer = document.getElementById('projects-container');
 const projects = new Array();
 
 projects.push({
-  name: "formularios en react",
-  image: 'react-form.png',
-  github_link: 'https://github.com/Sleek1307/react-form',
-  project_link: '#',
-  tags: [
-    'html',
-    'css',
-    'javascript',
-    'react',
-  ]
-}, {
-  name: "calculadora",
-  image: "calculadora.png",
+  name: "Calculadora",
+  description: "Calculadora funcional en todos los aspectos hecha con HTML5, CSS3 con estilos personalizados usando la metodología BEM y Vanilla JavaScript con una metodología de programacion funcional",
+  image: 'calculadora.png',
   github_link: "https://github.com/Sleek1307/calculadora",
   project_link: '#',
   tags: [
-    'html',
-    'css',
-    'javascript',
-    'jQuery',
+    'Html',
+    'Css',
+    'Javascript',
+  ]
+}, {
+  name: 'Alkeflix',
+  description: 'Una pagina web que se conecta a la API de theMovieDb que permite buscar filmes, ver una seccion con detalles de la pelicula y agregar o quitar a una seccion de favoritos',
+  image: 'alkeflix.png',
+  github_link: '',
+  project_link: '',
+  tags: [
+    'Bootstrap',
+    'React'
+  ]
+}, {
+  name: 'Spotify API',
+  description: 'Buscador que permite acceder a la cuenta de un usuario en Spotify y buscar pistas, albumes, artistas, etc. Tambien permite ver una breve descripcion de cada elemento buscado y encontrado',
+  image: 'spotify.png',
+  github_link: '',
+  project_link: '',
+  tags: [
+    'Bootstrap',
+    'React',
+    'React-Recoil',
   ]
 });
+
+console.log(projectsContainer)
+
 projects.map((project, index) => {
   projectsContainer.innerHTML += `
-    <div class="col-sm-6 col-lg-4 col-12 d-flex justify-content-center my-3">
-      <div class="card oswald" style="height: 400px; width: 350px;">
-        <div class="card-header " style="height: 55px;">
-          <h3 class="text-capitalize text-center">
-            ${project.name}
-          </h3>
+  <div class="swiper-slide">
+    <div class=" card col-3">
+      <div class="card__front card__face card__face--dark">
+        <div class="card__body">
+          <img src="img/${project.image}" class="card__img">
         </div>
-        <div class="card-body d-flex justify-content-center align-items-end bg-img" style ="background: url(img/${project.image}); height: 345px">
-          <div class="w-100 row">
-            <div class="col-6 d-flex justify-content-center align-items-center">
-              <a href="#" class="btn btn-secondary" style="width: 100px !important;">
-                Ver proyecto
-              </a>
-            </div>
-            <div class="col-6 d-flex justify-content-center align-items-center">
-              <a href="${project.github_link}" class="btn btn-secondary" style="width: 110px !important;" target="_blank">
-                Ver en github
-              </a>
-            </div>
-            <div id="tags-${index}" class="d-flex flex-wrap justify-content-center">
-            </div>
-          </div>
+        <div class="card__footer card__footer--dark">
+          <p class="card__title">${project.name}</p>
         </div>
       </div>
-    </div>`;
+      <div class="card__back card__face card__face--dark">
+        <div>
+        ${project.description}
+        </div>
+        <div class="w-100 d-flex mt-1 flex-wrap" id="tags-${index}">
+        </div>
+      </div>
+    </div>
+  </div>  
+  `;
 
   const tags = document.querySelector(`#tags-${index}`);
   project.tags.map(tag => {

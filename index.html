@@ -9,10 +9,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- Estilos-->
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/siwper.css">
+  <link rel="stylesheet" href="css/style.css" />
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -181,7 +181,9 @@
                       <p class="card__title">HTML</p>
                     </div>
                   </div>
-                  <div class="card__back card__face"></div>
+                  <div class="card__back card__face">Html es un lenguaje de marcado que permite estructurar una pagina
+                    web, en esta estructura se definen los diferentes elementos de esta,
+                    estos elementos pueden ser imagenes, textos, videos, enlaces, etc.</div>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -194,7 +196,9 @@
                       <p class="card__title">React</p>
                     </div>
                   </div>
-                  <div class="card__back card__face"></div>
+                  <div class="card__back card__face">React es una libreria que integra JavaScript y Html en una nueva
+                    sintaxis llamada JSX que facilita darle interactividad a la pagina, ayuda al enrutamiento de
+                    esta, permite el manejo de los datos de una mejor manera, etc.</div>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -207,7 +211,10 @@
                       <p class="card__title">JavaScript</p>
                     </div>
                   </div>
-                  <div class="card__back card__face "></div>
+                  <div class="card__back card__face ">JavaScript es el lenguaje que se usa para darle dinamismo a los
+                    diferentes elementos que estan en las paginas web, permite extraer los
+                    datos de los formularios, reaccionar a acciones que se hacen sobre los botones, texos o imagenes,
+                    etc.</div>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -221,7 +228,9 @@
                     </div>
                   </div>
                   <div class="card__back card__face">
-                    <div class="card__body"></div>
+                    Es un lenguaje de estilos que permite describir como se deben ver los diferentes elementos en
+                    pantalla, esto significa que es el elnguaje que indica el color,
+                    la fuente de los textos, tamaños, posiciones, animaciones, etc
                   </div>
                 </div>
               </div>
@@ -248,64 +257,7 @@
 
       <div class="w-75 justify-content-center align-items-center">
         <div class="swiper proyectos px-2">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class=" card col-3">
-                <div class="card__front card__face card__face--dark">
-                  <div class="card__body">
-                    <img src="img/calculadora.png" class="card__img">
-                  </div>
-                  <div class="card__footer card__footer--dark">
-                    <p class="card__title">Calculadora</p>
-                  </div>
-                </div>
-                <div class="card__back card__face card__face--dark"></div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class=" card col-3">
-                <div class="card__front card__face card__face--dark">
-                  <div class="card__body">
-                    <img src="img/pokedex-removebg-preview.png" class="card__img">
-                  </div>
-                  <div class="card__footer card__footer--dark">
-                    <p class="card__title">Pokedex</p>
-                  </div>
-                </div>
-                <div class="card__back card__face card__face--dark"></div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class=" card col-3">
-                <div class="card__front card__face card__face--dark">
-                  <div class="card__body">
-                    <img src="img/snake.png" class="card__img">
-                  </div>
-                  <div class="card__footer card__footer--dark">
-                    <p class="card__title">snake</p>
-                  </div>
-                </div>
-                <div class="card__back card__face card__face--dark"></div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class=" card col-3">
-                <div class="card__front card__face card__face--dark">
-                  <div class="card__body">
-                    <img src="img/reloj.png" class="card__img">
-                  </div>
-                  <div class="card__footer card__footer--dark">
-                    <p class="card__title">reloj</p>
-                  </div>
-                </div>
-                <div class="card__back card__face card__face--dark"></div>
-              </div>
-            </div>
-
+          <div class="swiper-wrapper" id="projects-container">
           </div>
           <div class="projects-pagination swiper-pagination"></div>
           <div class="swiper-button-prev control-button "></div>
@@ -381,8 +333,9 @@
   <!-- Swipper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <!-- Personalizado -->
-  <script src="js/app.js"></script>
+  <script src="js/project.js"></script>
   <script src="js/swiper.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

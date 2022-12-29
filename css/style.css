@@ -239,8 +239,12 @@ body::-webkit-scrollbar-thumb:hover {
 .card__back {
   height: 100%;
   width: 100%;
+  padding: 5%;
   backface-visibility: hidden;
   transform: perspective(600px) rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__img {

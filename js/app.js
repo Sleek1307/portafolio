@@ -2,7 +2,7 @@ const formulario = document.querySelector("#form");
 const formError = document.querySelector('#error');
 const downloadButton = document.querySelector('#download-button');
 
-// ----------------------------------------------- Descarga de arvhivo -----------------------------------------------------
+// ----------------------------------------------- Descarga de archivo -----------------------------------------------------
 const download = (path, goBlank, fileName) => {
     const downloadInstance = document.createElement('a');
     downloadInstance.href = path;
