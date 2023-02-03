@@ -11,7 +11,7 @@
   <!-- Importando los iconos de bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +22,11 @@
 </head>
 
 <body>
+
   <header class="header bg-light">
+
     <a href="/index.html" class="header__icon-container">
-      <img class="header__icon" src="img/JM_LOGO.png" />
+      <img src="img/JM_LOGO.png" alt="logo principal" class="header__icon" />
     </a>
 
     <input type="checkbox" id="check">
@@ -35,21 +37,86 @@
     <nav class="nav-bar bg-light">
       <ul class="nav-bar__list">
         <li class="nav-bar__item">
-          <a href="index.html" class="link fs-4">Inicio</a>
+          <a href="#home" class="link fs-4">
+            Inicio
+          </a>
+        </li>
+        <li class="nav-bar__item">
+          <a href="#about-me" class="link fs-4">
+            Acerca de mi
+          </a>
+        </li>
+        <li class="nav-bar__item">
+          <a href="/index.html#tecnologies" class="link fs-4">
+            Tecnologias
+          </a>
+        </li>
+        <li class="nav-bar__item">
+          <a href="/index.html#projects" class="link fs-4">
+            Projects
+          </a>
+        </li>
+        <li class="nav-bar__item">
+          <a href="#contact" class="link fs-4">
+            Contacto
+          </a>
         </li>
       </ul>
     </nav>
   </header>
 
   <div class="main-container">
-    <div id="home-projects" class="block container-fluid bg-svg text-light">
-      <img src="img/JULIAN.png" class="img-fluid avatar"></img>
-      <hr class="hr--light">
-      <h1>Proyectos</h1>
+    <div id="home" class="block container-fluid bg-svg text-light">
+      <div class="row container-fluid w-100 h-100 align-items-center ">
+        <div class="col-12 col-md-6 m-0 p-0 h-100 d-flex justify-content-end align-items-center">
+          <div>
+            <p class="d-flex flex-column">
+              <span class="fs-1 fw-bolder fst-italic">Estos son</span>
+
+              <span class="fs-1 fw-lighter ">Mis</span>
+              <span class="fs-1 fw-lighter fst-italic">Proyectos</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 m-0 p-0 h-100 d-flex justify-content-start align-items-center position-relative">
+          <img src="img/JULIAN.png" class="img-fluid">
+        </div>
+      </div>
     </div>
 
     <div id="projects-list" class="block container-fluid bg-light text-dark">
-      <div class="row container-fluid justify-content-around gap-4 my-5">
+      <div class="project-container bg-white shadow-sm my-4 rounded-3">
+        <div class="project-img-container">
+          <img src="/img/alkeflix.png" class="project-img img-fluid">
+          <div class="project-buttons">
+            <a class="btn btn-outline-dark">Live Demo</a>
+            <a class="btn btn-outline-dark">Github</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum esse, adipisci quam possimus minima
+            omnis vitae ipsum eveniet quod accusamus, ipsa eius et magni iste, ratione soluta odit eligendi.
+          </div>
+          <div class="project-tags">
+            <span class="badge bg-primary rounded-1 px-2 fst-italic">
+              #Html
+            </span>
+            <span class="badge bg-primary rounded-1 px-2 fst-italic">
+              #JavaScript
+            </span>
+            <span class="badge bg-primary rounded-1 px-2 fst-italic">
+              #CSS
+            </span>
+            <span class="badge bg-primary rounded-1 px-2 fst-italic">
+              #React
+            </span>
+          </div>
+          <hr class="w-100 ">
+        </div>
+      </div>
+      <hr>
+      <!-- <div class="row container-fluid justify-content-around gap-4 my-5">
 
         <div class="card col-12 col-sm-6 col-md-4 my-4">
           <div class="card__front card__face card__face--dark">
@@ -98,7 +165,7 @@
           </div>
           <div class="card__back card__face card__face--dark"></div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"

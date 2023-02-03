@@ -26,7 +26,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .main-container {
   padding-top: 60px;
-  width: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -144,15 +143,66 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .avatar {
-  border-radius: 50%;
   margin-top: 20px;
   width: 400px;
-  margin-bottom: 20px;
+  height: 400px;
+  float: left;
+  shape-outside: circle();
+  clip-path: circle();
   background-color: #fafafa;
-  border: solid 8px rgb(206, 206, 206);
+  border: solid 4px rgb(206, 206, 206);
 }
 
-/*----------------------------------------------------------BLOQUE------------------------------------------------------------*/
+.tags-container::-webkit-scrollbar {
+  display: none;
+  background: rgb(240, 240, 240);
+  border-radius: 18px;
+}
+
+.tags-container::-webkit-scrollbar-thumb {
+  display: none;
+  background: rgb(197, 197, 197);
+  border-radius: 8px;
+}
+
+.tags-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(180, 180, 180);
+}
+
+.project-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 20px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project-tags {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5px;
+}
+
+/*----------------------------------------------------------ELEMENTO------------------------------------------------------------*/
 
 .header__icon-container {
   margin-left: 50px;
@@ -216,6 +266,8 @@ body::-webkit-scrollbar-thumb:hover {
   margin-left: 10px;
 }
 
+
+
 .card__face {
   border: 1px solid #fafafa;
   border-radius: 5px;
@@ -243,8 +295,28 @@ body::-webkit-scrollbar-thumb:hover {
   backface-visibility: hidden;
   transform: perspective(600px) rotateY(180deg);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.card__back-text {
+  font-size: medium;
+}
+
+.card__back-text::-webkit-scrollbar {
+  width: 6px;
+  background: rgb(240, 240, 240);
+  border-radius: 18px;
+}
+
+.card__back-text::-webkit-scrollbar-thumb {
+  width: 6px;
+  background: rgb(197, 197, 197);
+  border-radius: 8px;
+}
+
+.card__back-text::-webkit-scrollbar-thumb:hover {
+  background: rgb(180, 180, 180);
 }
 
 .card__img {
@@ -263,11 +335,6 @@ body::-webkit-scrollbar-thumb:hover {
 .card__text {
   font-style: italic;
   font-weight: lighter;
-}
-
-.card__img {
-  width: 100%;
-  height: auto;
 }
 
 .card:hover .card__front {
@@ -331,7 +398,17 @@ body::-webkit-scrollbar-thumb:hover {
 .hr--light {
   width: 40%;
   color: #fafafa;
-  border: 2px solid white;
+  border: 1px solid white;
+}
+
+.card__footer--project {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.card__img--project {
+  object-fit: cover;
+  height: 100% !important;
 }
 
 /* --------------------------------------------------------------------------RESPONSIVE--------------------------------------------------------*/
@@ -400,6 +477,14 @@ body::-webkit-scrollbar-thumb:hover {
     position: static;
     margin-bottom: 20px;
   }
+
+  .project-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
 }
 
 @media(max-width: 576px) {}
