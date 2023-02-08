@@ -18,7 +18,7 @@ projects.push(
       "Una pagina web que se conecta a la API de theMovieDb que permite buscar filmes, ver una seccion con detalles de la pelicula y agregar o quitar a una seccion de favoritos",
     image: "alkeflix.png",
     github_link: "https://github.com/Sleek1307/Alkeflix",
-    project_link: "#",
+    project_link: "https://sleek1307.github.io/alkeflix",
     tags: ["Bootstrap", "React"],
   },
   {
@@ -27,7 +27,7 @@ projects.push(
       "Buscador que permite acceder a la cuenta de un usuario en Spotify y buscar pistas, albumes, artistas, etc. Tambien permite ver una breve descripcion de cada elemento buscado y encontrado",
     image: "spotify.png",
     github_link: "https://github.com/Sleek1307/spotify-app",
-    project_link: "",
+    project_link: "#",
     tags: ["Bootstrap", "React", "React-Recoil"],
   }
 );
@@ -60,16 +60,12 @@ if (projectsContainer) {
 if (projectsList) {
   projects.map((project, index) => {
     projectsList.innerHTML += `
-    <div class="project-container bg-white shadow-sm my-4 rounded-3">
+    <div class="project-container bg-white  my-4 rounded-3 border">
     <div class="project-img-container">
       <img src="img/${project?.image}" class="project-img img-fluid">
       <div class="project-buttons">
-      <a href="${
-        project?.project_link
-      }"class="btn btn-outline-dark">Live Demo</a>
-      <a href="${
-        project?.github_link
-      }" target="_blank" class="btn btn-outline-dark">Github</a>
+      <a href="${project?.project_link}"class="btn btn-outline-dark">Live Demo</a>
+      <a href="${project?.github_link}" target="_blank" class="btn btn-outline-dark">Github</a>
       </div>
     </div>
     <div class="project-body">
@@ -77,17 +73,16 @@ if (projectsList) {
         ${project?.description}
       </div>
       <div id="tags-${index}" class="project-tags">
-       ${project.tags.map((tag) => {
-          const html = document.createElement('span')
-          html.classList.add(...['badge', 'bg-primary', 'rounded-1', 'px-2', 'fst-italic'])
-          html.appendChild(document.createTextNode(tag));
-          return html;
-       })}
       </div>
       <hr class="w-100 ">
     </div>
   </div>
-  <hr>
   `;
+
+    const tagContainer = document.getElementById("tags-" + index);
+    project.tags.map((tag, index) => {
+      tagContainer.innerHTML += `<span class="badge bg-primary rounded-1 px-2 fst-italic">${tag}</span>`;
+    });
+    console.log(tagContainer);
   });
 }
