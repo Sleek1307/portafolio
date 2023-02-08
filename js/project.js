@@ -9,7 +9,7 @@ projects.push(
       "Calculadora funcional en todos los aspectos hecha con HTML5, CSS3 con estilos personalizados usando la metodología BEM y Vanilla JavaScript con una metodología de programacion funcional",
     image: "calculadora.png",
     github_link: "https://github.com/Sleek1307/calculadora",
-    project_link: "#",
+    project_link: "https://sleek1307.github.io/calculadora",
     tags: ["Html", "Css", "Javascript"],
   },
   {
@@ -17,7 +17,7 @@ projects.push(
     description:
       "Una pagina web que se conecta a la API de theMovieDb que permite buscar filmes, ver una seccion con detalles de la pelicula y agregar o quitar a una seccion de favoritos",
     image: "alkeflix.png",
-    github_link: "https://github.com/Sleek1307/Alkeflix",
+    github_link: "https://github.com/Sleek1307/alkeflix",
     project_link: "https://sleek1307.github.io/alkeflix",
     tags: ["Bootstrap", "React"],
   },
@@ -27,7 +27,7 @@ projects.push(
       "Buscador que permite acceder a la cuenta de un usuario en Spotify y buscar pistas, albumes, artistas, etc. Tambien permite ver una breve descripcion de cada elemento buscado y encontrado",
     image: "spotify.png",
     github_link: "https://github.com/Sleek1307/spotify-app",
-    project_link: "#",
+    project_link: "",
     tags: ["Bootstrap", "React", "React-Recoil"],
   }
 );
@@ -62,19 +62,20 @@ if (projectsList) {
     projectsList.innerHTML += `
     <div class="project-container bg-white  my-4 rounded-3 border">
     <div class="project-img-container">
-      <img src="img/${project?.image}" class="project-img img-fluid">
-      <div class="project-buttons">
-      <a href="${project?.project_link}"class="btn btn-outline-dark">Live Demo</a>
-      <a href="${project?.github_link}" target="_blank" class="btn btn-outline-dark">Github</a>
-      </div>
+      <img src="img/${project?.image}" class="project-img img-fluid rounded-1">
     </div>
     <div class="project-body">
-      <div class="project-description">
+    <div class="w-75">
+     <div class="project-description">
         ${project?.description}
       </div>
       <div id="tags-${index}" class="project-tags">
       </div>
-      <hr class="w-100 ">
+      <div class="project-buttons">
+      <a href="${project?.project_link}"class="btn btn-sm btn-outline-dark">Live Demo</a>
+      <a href="${project?.github_link}" target="_blank" class="btn btn-sm btn-outline-dark">Github</a>
+      </div>
+    </div>
     </div>
   </div>
   `;
